@@ -82,7 +82,8 @@ public class ShaunOkaWaterBillAnnualSummary{
                     minResidential, minCommercial, priceResidential, priceCommercial);
         }
         summary(consumerName, consumerType, beginWater, presentWater, cubicMeterUsed, duePayment);
-    }
+        System.exit(0);
+    } //end of main
     /**
       ALGORITHM:
       1. display a welcome message with the program's name.
@@ -322,7 +323,7 @@ public class ShaunOkaWaterBillAnnualSummary{
     public static int highest(int[] numberArray) {
         int index = 0;
         int result = numberArray[0];
-        for (int element:numberArray){
+        for (int element : numberArray) {
             if (element > result) {
                 result = element;
             }
@@ -334,7 +335,7 @@ public class ShaunOkaWaterBillAnnualSummary{
         }
         return -1;
     }
-}
+} //end of class
 
 /*
 SHOW A SAMPLE RUN OF THE PROGRAM WITHIN THIS COMMENT DELIMITERS
