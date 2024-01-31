@@ -1,57 +1,5 @@
-/*
-Name/Author : Oka, Shaun Gerald D.
-Class Code  : 9308A/9308B
-Course No.  : CS 122/122L
-Schedule    : 2:30pm - 3:30pm MTH (9308A) / 1:30pm - 3:00 pm TF (9308B)
-Date        : January 23, 2024
- */
-/** (Hypothetical Annual Water Bill Summary Problem )
- The water bills for the 12 months of a year by a water service
- subscriber is summarized as follows.
- Inputs:
- Water Meter Reading at the beginning of the year (i.e. January 1)
- Water Meter Readings at the end of each of the 12 months
- Payment Rates (Minimum Bill, price of water per cubic meter)
- Outputs:
- Cubic meters of water consumed for each month (monthly consumption)
- Amount paid for each month based on given rates (monthly payment)
- Average of monthly consumptions
- Average of monthly payments
- The month during which the amount of water consumed is highest
- The month during which the amount of water consumed is lowest
- Algorithm
- 1.Read the name of the water consumer (consumer).
- 2.Read The classification (consumerType) of the consumer such
- that the only valid values for consumerType is "commercial" or "residential".
- 3.Read water meter reading in cubic meters at the beginning of the year([0]).
- 4.For month 1 to 12
- Read the water meter reading in cubic meters at the end of the month (presentR) such
- that presentR cannot be less than previousR. Store the value in an array.
- Compute the volume of water consumed for the month (consumption)
- by subtracting the previousR from presentR. Store the value in an array.
- Compute the amount due (amountDue) from the consumer based on
- the following rules
- If consumerType is residential and consumption <= 12, the amount due is 180.00
- If consumerType is residential and consumption > 12, the amount due is 180.00 + (consumption – 12)*30.00
- If consumerType is commercial and consumption <= 30, the amount due is 600.00
- If consumerType is commercial and consumption > 30, the amount due is 600.00 + (consumption – 30)*50.00
- Store the value in an array.
- 5. Determine the average of the monthly water consumptions.
- 6. Determine the average of the monthly payments.
- 7. Determine the month during which water consumed is highest.
- 8. Determine the month during which water consumed is least.
- 9. Print the name of the consumer.
- 10. Print the consumer type.
- 11. Print the water meter reading at the beginning of the year.
- 12. Print a table showing the 12 months, water meter readings at
- the end of each month, the amount paid due to the water
- consumption for each month.
- 13. Print the average of the monthly water consumptions.
- 14. Print the average of the monthly payments.
- 15. Print the month during which water consumption is highest.
- 16. Print the month during which water consumption is lowest.
- */
-// You may modify the algorithm/program as you deem necessary
+package prelims;
+
 
 import java.util.Scanner;
 public class ShaunOkaWaterBillAnnualSummary{
