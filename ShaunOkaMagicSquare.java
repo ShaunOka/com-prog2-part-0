@@ -7,7 +7,6 @@
 
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
@@ -28,7 +27,7 @@ public class ShaunOkaMagicSquare {
         System.exit(0);
     } // end of main
 
-/**General Algorithm ( Implemented in the run method. )
+/**General Algorithm (Implemented in the run method.)
 *1. Accept the desired size of the magic square
 *2. If the size entered is an even number, give a message saying the size
 * must be an odd number and repeat from step 1.
@@ -40,7 +39,7 @@ public class ShaunOkaMagicSquare {
 */
     public void run() throws Exception {
         BufferedReader keyBoard = new BufferedReader(new InputStreamReader(System.in));
-        int squareSize = 0;
+        int squareSize;
         System.out.println("Magic Square Generator");
         squareSize = readOddInteger(keyBoard);
         System.out.printf("%d by %d magic square%n", squareSize, squareSize);
@@ -98,7 +97,7 @@ public class ShaunOkaMagicSquare {
     *magic square
     *
     *Processes:
-    *1. Instantiate the two dimensional array called magicSquare
+    *1. Instantiate the two-dimensional array called magicSquare
     *2. Initialize magicSquare such that every cell is filled with 0 by
     * giving magicSquare to the method for initializing a two-dimensional
     * array.
@@ -111,7 +110,7 @@ public class ShaunOkaMagicSquare {
     * Let element = element + 1
     * Let row = row -1 ( i.e. Move one cell up diagonally)
     * Let col = col + 1
-    * If row <0 and col > size-1, go the the cell below the corner cell
+    * If row <0 and col > size-1, go the cell below the corner cell
     * row = row+2;
     * col = col-1
     * If row < 0, go to the last valid row
@@ -127,7 +126,7 @@ public class ShaunOkaMagicSquare {
      */
     public int[][] generateMagicSquare(int squareSize) {
         int[][] magicSquare = new int[squareSize][squareSize];
-        magicSquare = initializeArray(magicSquare);
+        initializeArray(magicSquare);
         int element = 1;
         int row = 0;
         int col = squareSize/2;
@@ -161,21 +160,20 @@ public class ShaunOkaMagicSquare {
     * For column 0 to last column of each row
     * let array[row][column] = 0
      */
-    public int[][] initializeArray(int[][] twoDimensionArray) {
+    public void initializeArray(int[][] twoDimensionArray) {
         for (int row = 0; row < twoDimensionArray.length; row++) {
             for (int col = 0; col < twoDimensionArray.length; col++) {
                 twoDimensionArray[row][col] = 0;
             }
         }
-        return twoDimensionArray;
     }
-    /**Displays each element of a two dimensional on a space with
+    /**Displays each element of a two-dimensional on a space with
     * uniform width.
     *Given: Two-dimensional array
     * For row =0 to last valid row of the given two-dimensional array
     * For column = 0 to last valid column of a row
     * Print the element at the current row and column on a fixed width space
-    * Print the enter character */
+    * Print the entered character */
     public void display(int[][] twoDimensionArray) {
         for (int row = 0; row < twoDimensionArray.length; row++) {
             for (int col = 0; col < twoDimensionArray.length; col++) {
