@@ -62,7 +62,10 @@ public class OkaShaunGeraldStudentRecordsViaParallelArrays {
                                byte[] prelimGrade, byte[] midtermGrade, byte[] tentativeFinalGrade,
                                byte[] finalGrade) {
         String[][] stringStudentRecords = {id, name, course};
+        String[] stringNames = {"id", "name", "course"}
         byte[][] byteStudentRecords = {prelimGrade, midtermGrade, tentativeFinalGrade, finalGrade};
+        String[] byteNames = {"preliminary", "midterm", "tentative final", "final"};
+        for 
 
     }
 }
