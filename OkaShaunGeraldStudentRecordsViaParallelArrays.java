@@ -160,7 +160,7 @@ public class OkaShaunGeraldStudentRecordsViaParallelArrays {
         int sortIndex = 0;
 
         for (int index1 = 0; index1 < name.length; index1++) {
-            for (int index2 = 1; index2 < name.length; index2++) {
+            for (int index2 = index1 + 1; index2 < name.length; index2++) {
                 if (name[index1].compareTo(name[index2]) > 0) {
                     sortIndex = index2;
                 }
@@ -243,8 +243,8 @@ Sorted Data
 
                 Name         ID           Course   Year   Prelims   Midterms   Tentative Final   Finals
             B, Shaun        124            BSMMA      2        96         95                94       95
-              Y, Oka        125             BSIT      3        93         92                91       92
           Oka, Shaun        123             BSCS      1        99         98                97       98
+              Y, Oka        125             BSIT      3        93         92                91       92
 
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
